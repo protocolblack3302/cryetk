@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Fri Sep 04 04:25:08 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0174-562e-48e1-00000721f8c0 
+on database directory /Users/protocolblack/IdeaProjects/firstdatabase/firstdatabase with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
+Loaded from file:/Users/protocolblack/Downloads/derby/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.8+10-LTS
+user.dir=/Users/protocolblack/IdeaProjects/firstdatabase
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Sep 04 04:28:48 IST 2020: Shutting down Derby engine
+----------------------------------------------------------------
+Fri Sep 04 04:28:48 IST 2020:
+Shutting down instance a816c00e-0174-562e-48e1-00000721f8c0 on database directory /Users/protocolblack/IdeaProjects/firstdatabase/firstdatabase with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
+----------------------------------------------------------------
