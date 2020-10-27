@@ -1,5 +1,5 @@
 
- class longestcommonsubsequence {
+ public class checker {
     //RECURSIVE LCS
     static int m, n;
     //    static int[][] result=new int[6][6];
@@ -105,8 +105,7 @@
 
 
     public static void main(String[] args) {
-
-
+        
         System.out.println(lcs_itr( "abcbdab","bdcaba"));
 
     }
