@@ -9,7 +9,18 @@ public class Graph {
 
     private HashMap<Node,LinkedList<Node>> adj;
 
-static class Node{
+    public int distance(int source,int destination){
+        Node s=new Node(source);
+        Node d=new Node(destination);
+       for(Node n:adj.get(s)){
+           if(n==d){
+               return n.distance;
+           }
+       }
+       return -1;
+    }
+
+    static class Node{
     public int node_no;
     public boolean visited;
     public int distance;
@@ -66,7 +77,7 @@ static class Node{
 
     }
 
-    static void bfs(Graph g,int source){
+    public static void bfs(Graph g,int source){
     Node s=new Node(source);
     Node current;
     s.visited=true;
@@ -83,6 +94,10 @@ static class Node{
                 }
             }
         }
+
+
     }
-    
+
+
+
 }
