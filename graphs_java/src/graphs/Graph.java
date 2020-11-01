@@ -6,6 +6,7 @@ public class Graph {
     private int time;
     private final HashMap<Node,LinkedList<Node>> adj;
     private ArrayList<Node> index_nodes;  //these are key objects of hashmap we stored refrence of them here to use
+    private boolean cycle;
 
     public static int distance(Graph g,int source,int destination){
         g.bfs(source);
@@ -14,6 +15,7 @@ public class Graph {
     }
 
     private static class Node{
+
     private int node_no;
     private boolean visited;
     private int distance;
@@ -123,9 +125,14 @@ public class Graph {
 
         for(Node v:adj.get(source)){
             if(!v.visited){
-                v.visited=true;  //dfs visited each and every node in graph weather it is a forest graph
+                                //dfs visited each and every node in graph weather it is a forest graph
+                v.predecessor=source;
                 dfsUtil(v);
 
+            }
+            else if(v.visited && source.predecessor!=v){  //checking if graph has cycle and setting cycle variable of graph to true or false
+                cycle=true;   //if the current source node has v in adjacency list and it is already visited and it is not parent of source node
+                //then it is a backedge which meaans graph has a cycle
             }
         }
         time++;
@@ -140,6 +147,11 @@ public class Graph {
       }
     }
 
+    public boolean hasCycle()
+    {
+        dfs();
+        return cycle;
+    }
     public boolean dfsStack(int source ,int destination){
         Node s=index_nodes.get(source);
         Node d=index_nodes.get(destination);
