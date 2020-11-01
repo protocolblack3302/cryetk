@@ -1,19 +1,17 @@
 package graphs;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class Graph {
 
     private HashMap<Node,LinkedList<Node>> adj;
+    Set<Node> index_nodes;
 
-    public int distance(int source,int destination){
-        Node s=new Node(source);
+    public static int distance(Graph g,int source,int destination){
+        g.bfs(source);
         Node d=new Node(destination);
-       for(Node n:adj.get(s)){
-           if(n==d){
+       for(Node n: g.index_nodes){
+           if(n.equals(d)){
                return n.distance;
            }
        }
@@ -47,13 +45,20 @@ public class Graph {
     public int hashCode() {
         return node_no;
     }
-}
+
+
+        @Override
+        public String toString() {
+            return String.valueOf(node_no);
+        }
+    }
 
     public Graph(int vertices,int edges){
         adj=new HashMap();
         for(int i=0;i<vertices;i++){
             adj.put(new Node(i),new LinkedList<>());
         }
+        index_nodes=adj.keySet();
         Scanner sc=new Scanner(System.in);
         for(int i=0;i<edges;++i){
             System.out.println("Enter Source and destination to add an edge :");
@@ -64,8 +69,20 @@ public class Graph {
     }
 
     public void addEdge(int source,int destination){
-    Node s=new Node(source);
-    Node d=new Node(destination);
+
+
+        Node s=null;
+        Node d=null;
+        for(Node n:index_nodes){
+            if(n.equals(new Node(destination))){
+                d=n;
+            }
+            if(n.equals(new Node(source))){
+                s=n;
+            }
+        }
+
+
     try {
         adj.get(s).add(d);
         adj.get(d).add(s);
@@ -77,18 +94,28 @@ public class Graph {
 
     }
 
-    public static void bfs(Graph g,int source){
+    public void bfs(int source){
     Node s=new Node(source);
     Node current;
-    s.visited=true;
+
+        Set<Node> set_keys=index_nodes;
+        System.out.println(set_keys);
         Queue<Node> q=new LinkedList<>();
-        q.add(s);
+
+        for(Node first_node:set_keys){
+            if(first_node.equals(s)){
+             first_node.visited=true;
+                q.add(first_node);
+
+            }
+        }
+
         while (!(q.isEmpty())){
             current=q.poll();
-            for(Node vertex:g.adj.get(current)){
+            for(Node vertex:adj.get(current)){
                 if(!vertex.visited){
                     vertex.visited=true;
-                    vertex.distance++;
+                    vertex.distance=current.distance+1;
                     vertex.predecessor=current;
                     q.add(vertex);
                 }
@@ -97,7 +124,4 @@ public class Graph {
 
 
     }
-
-
-
 }
