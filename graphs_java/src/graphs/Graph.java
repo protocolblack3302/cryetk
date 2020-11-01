@@ -3,9 +3,9 @@ package graphs;
 import java.util.*;
 
 public class Graph {
-
+    private int time;
     private final HashMap<Node,LinkedList<Node>> adj;
-    ArrayList<Node> index_nodes;  //these are key objects of hashmap we stored refrence of them here to use
+    private ArrayList<Node> index_nodes;  //these are key objects of hashmap we stored refrence of them here to use
 
     public static int distance(Graph g,int source,int destination){
         g.bfs(source);
@@ -13,11 +13,15 @@ public class Graph {
 
     }
 
-    static class Node{
-    public int node_no;
-    public boolean visited;
-    public int distance;
-    public Node predecessor;
+    private static class Node{
+    private int node_no;
+    private boolean visited;
+    private int distance;
+    private Node predecessor;
+    private int startTime;
+    private int finishTime;
+
+
     Node(int node_no){
         this.node_no=node_no;
         visited=false;
@@ -63,7 +67,7 @@ public class Graph {
         }
     }
 
-    public void addEdge(int source,int destination){
+    private void addEdge(int source,int destination){
 
         Node s;
         Node d;
@@ -107,8 +111,54 @@ public class Graph {
                 }
             }
         }
-            System.out.println("");
+        System.out.println();
 
+    }
+
+
+    private void dfsUtil(Node source){
+        time++;
+        source.startTime=time;      //helps in studying strongly connected components
+        source.visited=true;
+
+        for(Node v:adj.get(source)){
+            if(!v.visited){
+                v.visited=true;  //dfs visited each and every node in graph weather it is a forest graph
+                dfsUtil(v);
+
+            }
+        }
+        time++;
+        source.finishTime=time;
+    }
+
+    public void dfs(){
+      for(Node n:index_nodes){
+          if(!n.visited){
+              dfsUtil(n);
+          }
+      }
+    }
+
+    public boolean dfsStack(int source ,int destination){
+        Node s=index_nodes.get(source);
+        Node d=index_nodes.get(destination);
+        s.visited=true;
+        Stack<Node> stk=new Stack<>();
+        stk.push(s);
+        while(!stk.isEmpty()){
+            Node current=stk.pop();
+            if(current.node_no==destination){
+                return true;
+            }
+            for(Node n:adj.get(current)){
+                if(!n.visited){
+                    n.visited=true;
+                    stk.push(n);
+                }
+            }
+        }
+        return false;
     }
 
     public void printGraph(int source,int destination){
