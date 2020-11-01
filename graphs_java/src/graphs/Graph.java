@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Graph {
 
-    private HashMap<Node,LinkedList<Node>> adj;
-    ArrayList<Node> index_nodes;
+    private final HashMap<Node,LinkedList<Node>> adj;
+    ArrayList<Node> index_nodes;  //these are key objects of hashmap we stored refrence of them here to use
 
     public static int distance(Graph g,int source,int destination){
         g.bfs(source);
@@ -101,14 +101,28 @@ public class Graph {
                     vertex.visited=true;
                     vertex.distance=current.distance+1;
                     vertex.predecessor=current;
-                    System.out.print(vertex);
+                    System.out.print(vertex+" ");
                     q.add(vertex);
 
                 }
             }
         }
-System.out.println();
+            System.out.println("");
 
+    }
+
+    public void printGraph(int source,int destination){
+        Node s=index_nodes.get(source);
+        Node d=index_nodes.get(destination);
+        if(s.equals(d)){
+//            System.out.println(source);
+        }else if(d.predecessor==null){
+            System.out.println("No path found");
+        }else{
+            printGraph(source,d.predecessor.node_no);
+            System.out.print("->"+d.node_no);
+        }
+        System.out.println("");
     }
 
 }
