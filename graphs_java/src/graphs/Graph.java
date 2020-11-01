@@ -5,17 +5,12 @@ import java.util.*;
 public class Graph {
 
     private HashMap<Node,LinkedList<Node>> adj;
-    Set<Node> index_nodes;
+    ArrayList<Node> index_nodes;
 
     public static int distance(Graph g,int source,int destination){
         g.bfs(source);
-        Node d=new Node(destination);
-       for(Node n: g.index_nodes){
-           if(n.equals(d)){
-               return n.distance;
-           }
-       }
-       return -1;
+        return g.index_nodes.get(destination).distance;
+
     }
 
     static class Node{
@@ -58,7 +53,7 @@ public class Graph {
         for(int i=0;i<vertices;i++){
             adj.put(new Node(i),new LinkedList<>());
         }
-        index_nodes=adj.keySet();
+        index_nodes=new ArrayList<>(adj.keySet());
         Scanner sc=new Scanner(System.in);
         for(int i=0;i<edges;++i){
             System.out.println("Enter Source and destination to add an edge :");
@@ -70,17 +65,11 @@ public class Graph {
 
     public void addEdge(int source,int destination){
 
+        Node s;
+        Node d;
 
-        Node s=null;
-        Node d=null;
-        for(Node n:index_nodes){
-            if(n.equals(new Node(destination))){
-                d=n;
-            }
-            if(n.equals(new Node(source))){
-                s=n;
-            }
-        }
+        d=index_nodes.get(destination);
+        s=index_nodes.get(source);
 
 
     try {
@@ -95,20 +84,15 @@ public class Graph {
     }
 
     public void bfs(int source){
-    Node s=new Node(source);
+
     Node current;
 
-        Set<Node> set_keys=index_nodes;
-        System.out.println(set_keys);
+
         Queue<Node> q=new LinkedList<>();
 
-        for(Node first_node:set_keys){
-            if(first_node.equals(s)){
-             first_node.visited=true;
-                q.add(first_node);
+        index_nodes.get(source).visited=true;
+        q.add(index_nodes.get(source));
 
-            }
-        }
 
         while (!(q.isEmpty())){
             current=q.poll();
@@ -117,11 +101,14 @@ public class Graph {
                     vertex.visited=true;
                     vertex.distance=current.distance+1;
                     vertex.predecessor=current;
+                    System.out.print(vertex);
                     q.add(vertex);
+
                 }
             }
         }
-
+System.out.println();
 
     }
+
 }

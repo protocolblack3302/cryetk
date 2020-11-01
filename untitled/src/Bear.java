@@ -2,8 +2,8 @@ import graphs.Graph;
 
 public class Bear {
     public static void main(String[] args){
-Graph g =new Graph(4,5);
-System.out.println(Graph.distance(g,0,2));
+Graph g =new Graph(8,10);
+System.out.println(Graph.distance(g,2,7));
 
 
     }
