@@ -11,7 +11,7 @@ public class Graph {
     private ArrayList<Node> index_nodes_transpose;//these are key objects of hashmap we stored refrence of them here to use
     private boolean cycle;
     private LinkedList<Node> transpose_stack=new LinkedList<>();
-    
+
     public enum TYPE{
         DIRECTED,UNDIRECTED
     }
