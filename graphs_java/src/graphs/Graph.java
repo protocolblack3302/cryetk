@@ -21,6 +21,9 @@ public class Graph {
         TRANSPOSE
     }
 
+    public ArrayList<Node> vertices(){
+        return index_nodes;
+    }
     public static int distance(Graph g,int source,int destination){
         g.bfs(source);
 
