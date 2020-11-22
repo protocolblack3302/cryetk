@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a9ec728-2a0a-4025-a16d-d965c4374548" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-3.11.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wow/controllers/Downloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wow/models/DBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wow/models/MusicDownloader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wow/models/MusicDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/albums/bohemia/.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/albums/bohemia/bohemia.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/albums/honeySingh/.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/albums/imranKhan/.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/albums/kaka/.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/download.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DisjointSets/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DisjointSets/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DisjointSets/src/main/java/DisjointSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DisjointSets/src/main/java/DisjointSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/out/production/graphs_java/graphs/Graph$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/out/production/graphs_java/graphs/Graph$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/out/production/graphs_java/graphs/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/out/production/graphs_java/graphs/Graph.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/wow/models/MusicDownloader.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1kUMDw3QkpVafBqYL5uffG8Dbei" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/styles" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.40229884" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/styles" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/java/wow" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="docker-deploy" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.381">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wow.models.MusicDownloader" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.381" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.381" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.example : demo-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_381_demo" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52745" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : demo-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.381" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_demo" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52745" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.381" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a9ec728-2a0a-4025-a16d-d965c4374548" name="Default Changelist" comment="" />
+      <created>1605750600695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605750600695</updated>
+      <workItem from="1605750601940" duration="5657000" />
+      <workItem from="1605757265876" duration="1058000" />
+      <workItem from="1605770235973" duration="12691000" />
+      <workItem from="1605812325638" duration="215000" />
+      <workItem from="1605908876941" duration="235000" />
+      <workItem from="1605915392708" duration="27436000" />
+      <workItem from="1606039358432" duration="1366000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="164" width="724" height="571" key="#Docker" timestamp="1605755257643">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="488" y="164" width="724" height="571" key="#Docker/0.0.1440.900@0.0.1440.900" timestamp="1605755257643" />
+    <state x="488" y="164" key="#New_Docker_Connection" timestamp="1605783430177">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="488" y="164" key="#New_Docker_Connection/0.0.1440.900@0.0.1440.900" timestamp="1605783430177" />
+    <state x="560" y="366" key="#Path_mapping" timestamp="1605755035477">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="560" y="366" key="#Path_mapping/0.0.1440.900@0.0.1440.900" timestamp="1605755035477" />
+    <state x="208" y="28" key="#Project_Structure" timestamp="1606019915473">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="28" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1606019915473" />
+    <state x="99" y="283" key="#SQL_Dialects" timestamp="1606009308214">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="99" y="283" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1606009308214" />
+    <state x="638" y="347" key="#TomEE_Server" timestamp="1605755796910">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="638" y="347" key="#TomEE_Server/0.0.1440.900@0.0.1440.900" timestamp="1605755796910" />
+    <state x="636" y="347" key="#Tomcat_Server" timestamp="1605755825091">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="636" y="347" key="#Tomcat_Server/0.0.1440.900@0.0.1440.900" timestamp="1605755825091" />
+    <state x="635" y="234" key="#Web_Browsers" timestamp="1605772101198">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="635" y="234" key="#Web_Browsers/0.0.1440.900@0.0.1440.900" timestamp="1605772101198" />
+    <state x="308" y="0" width="1071" height="900" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606002932618">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="308" y="0" width="1071" height="900" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1606002932618" />
+    <state x="458" y="230" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1605750970326">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="230" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1605750970326" />
+    <state x="58" y="146" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1605784571442">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="58" y="146" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1440.900@0.0.1440.900" timestamp="1605784571442" />
+    <state x="479" y="237" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1605784574528">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="479" y="237" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605784574528" />
+    <state width="958" height="191" key="GridCell.Tab.0.bottom" timestamp="1606040933443">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606040933443" />
+    <state width="958" height="191" key="GridCell.Tab.0.bottom/77.25.1363.875@77.25.1363.875" timestamp="1606018972773" />
+    <state width="958" height="191" key="GridCell.Tab.0.center" timestamp="1606040933441">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606040933441" />
+    <state width="958" height="191" key="GridCell.Tab.0.center/77.25.1363.875@77.25.1363.875" timestamp="1606018972771" />
+    <state width="958" height="191" key="GridCell.Tab.0.left" timestamp="1606040933441">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606040933441" />
+    <state width="958" height="191" key="GridCell.Tab.0.left/77.25.1363.875@77.25.1363.875" timestamp="1606018972769" />
+    <state width="958" height="191" key="GridCell.Tab.0.right" timestamp="1606040933442">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606040933442" />
+    <state width="958" height="191" key="GridCell.Tab.0.right/77.25.1363.875@77.25.1363.875" timestamp="1606018972772" />
+    <state width="958" height="191" key="GridCell.Tab.1.bottom" timestamp="1606040933184">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606040933184" />
+    <state width="958" height="191" key="GridCell.Tab.1.bottom/77.25.1363.875@77.25.1363.875" timestamp="1606018972671" />
+    <state width="958" height="191" key="GridCell.Tab.1.center" timestamp="1606040933182">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606040933182" />
+    <state width="958" height="191" key="GridCell.Tab.1.center/77.25.1363.875@77.25.1363.875" timestamp="1606018972670" />
+    <state width="958" height="191" key="GridCell.Tab.1.left" timestamp="1606040933182">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606040933182" />
+    <state width="958" height="191" key="GridCell.Tab.1.left/77.25.1363.875@77.25.1363.875" timestamp="1606018972669" />
+    <state width="958" height="191" key="GridCell.Tab.1.right" timestamp="1606040933183">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606040933183" />
+    <state width="958" height="191" key="GridCell.Tab.1.right/77.25.1363.875@77.25.1363.875" timestamp="1606018972670" />
+    <state width="958" height="191" key="GridCell.Tab.2.bottom" timestamp="1606040933181">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606040933181" />
+    <state width="958" height="191" key="GridCell.Tab.2.bottom/77.25.1363.875@77.25.1363.875" timestamp="1606018972668" />
+    <state width="958" height="191" key="GridCell.Tab.2.center" timestamp="1606040933179">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1606040933179" />
+    <state width="958" height="191" key="GridCell.Tab.2.center/77.25.1363.875@77.25.1363.875" timestamp="1606018972667" />
+    <state width="958" height="191" key="GridCell.Tab.2.left" timestamp="1606040933178">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1606040933178" />
+    <state width="958" height="191" key="GridCell.Tab.2.left/77.25.1363.875@77.25.1363.875" timestamp="1606018972666" />
+    <state width="958" height="191" key="GridCell.Tab.2.right" timestamp="1606040933180">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1606040933180" />
+    <state width="958" height="191" key="GridCell.Tab.2.right/77.25.1363.875@77.25.1363.875" timestamp="1606018972667" />
+    <state width="958" height="191" key="GridCell.Tab.3.bottom" timestamp="1606040674939">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606040674939" />
+    <state width="958" height="191" key="GridCell.Tab.3.bottom/77.25.1363.875@77.25.1363.875" timestamp="1606013758672" />
+    <state width="958" height="191" key="GridCell.Tab.3.center" timestamp="1606040674937">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1606040674937" />
+    <state width="958" height="191" key="GridCell.Tab.3.center/77.25.1363.875@77.25.1363.875" timestamp="1606013758670" />
+    <state width="958" height="191" key="GridCell.Tab.3.left" timestamp="1606040674936">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1606040674936" />
+    <state width="958" height="191" key="GridCell.Tab.3.left/77.25.1363.875@77.25.1363.875" timestamp="1606013758669" />
+    <state width="958" height="191" key="GridCell.Tab.3.right" timestamp="1606040674938">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="191" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1606040674938" />
+    <state width="958" height="191" key="GridCell.Tab.3.right/77.25.1363.875@77.25.1363.875" timestamp="1606013758671" />
+    <state x="234" y="9" key="SettingsEditor" timestamp="1605786170197">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="234" y="9" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605786170197" />
+    <state x="444" y="375" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605784560992">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="444" y="375" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1440.900@0.0.1440.900" timestamp="1605784560992" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1605993913701">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1605993913701" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606019541012">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606019541012" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/wow/controllers/Downloader.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/wow/controllers/Downloader.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
