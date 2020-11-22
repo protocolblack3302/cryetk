@@ -1,0 +1,13 @@
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Process started with '--ide-token /Users/protocolblack/IdeaProjects/DisjointSets/build/idea-sandbox/system/token --recorder FUS --files /Users/protocolblack/IdeaProjects/DisjointSets/build/idea-sandbox/system/event-log-data/logs/FUS/b984-41ee-8302-422aee1a70da-202.7660.26-release.log --device 04092024ead31a4-43cb-4797-ad97-12d3c8357275 --bucket 242 --url https://resources.jetbrains.com/storage/fus/config/v3/%s/%s.json --product IC --product-version 2020.2.3 --user-agent IntelliJ IDEA/202.7660.26'
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.events.ExternalEventsLogger - 1606085014815 STARTED
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - IDE token file: /Users/protocolblack/IdeaProjects/DisjointSets/build/idea-sandbox/system/token
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Start uploading...
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {url:https://resources.jetbrains.com/storage/fus/config/v3/%s/%s.json, product:IC, userAgent:IntelliJ IDEA/202.7660.26(External), internal:false, isTest:false}
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {recorder:FUS, files:/Users/protocolblack/IdeaProjects/DisjointSets/build/idea-sandbox/system/event-log-data/logs/FUS/b984-41ee-8302-422aee1a70da-202.7660.26-release.log}
+23/11 04:13:34 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {device:04092024ead31a4-43cb-4797-ad97-12d3c8357275, bucket:242}
+23/11 04:13:38 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - b984-41ee-8302-422aee1a70da-202.7660.26-release.log-> Cannot upload event log, record list is empty
+23/11 04:13:38 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Removed sent log: b984-41ee-8302-422aee1a70da-202.7660.26-release.log
+23/11 04:13:38 INFO  com.intellij.internal.statistic.uploader.events.ExternalEventsLogger - 1606085018528 SEND 0 1 1 []
+23/11 04:13:38 INFO  com.intellij.internal.statistic.uploader.events.ExternalEventsLogger - 1606085018530 FINISHED SENT_WITH_ERRORS
+23/11 04:13:38 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Uploading finished with SENT_WITH_ERRORS
+23/11 04:13:38 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Uploaded 0 out of 1 files.

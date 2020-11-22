@@ -29,6 +29,8 @@ public class Downloader extends HttpServlet {
         String url = "/index.jsp";
         if (action.equals("add")) {
             url = registerUser(request, response);
+        }else{
+            log("no add request found in jsp");
         }
 
         getServletContext().getRequestDispatcher(url).forward(request, response);
