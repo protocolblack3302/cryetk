@@ -29,14 +29,15 @@ public class Graph {
     public ArrayList<Node> vertices(){
         return index_nodes;
     }
-    public static int distance(Graph g,int source,int destination){
-        g.bfs(source);
 
+    public static int distance(Graph g,int source,int destination){
+
+        g.bfs(source);
         return g.index_nodes.get(destination).distance;
     }
 
     public static class Node{
-        int[] weight;
+        public  int[] weight;
 
         public int getNode_no() {
             return node_no;
@@ -62,7 +63,7 @@ public class Graph {
             return finishTime;
         }
 
-        private int node_no;
+        public int node_no;
     private boolean visited;
     private int distance;
     private Node predecessor;
