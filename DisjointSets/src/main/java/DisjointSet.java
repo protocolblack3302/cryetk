@@ -60,41 +60,6 @@ public class DisjointSet {
         return node.parent;
     }
 
-    public static void main(String[] args){
 
-        DisjointSet set=new DisjointSet();
-        set.makeSet(0);
-        set.makeSet(1);
-        set.makeSet(2);
-        set.makeSet(3);
-        set.makeSet(4);
-        set.makeSet(5);
-        set.makeSet(6);
-
-        set.union(0,1);
-        set.union(1,2);
-        set.union(3,4);
-        set.union(5,6);
-        set.union(4,5);
-        set.union(2,6);
-
-
-        System.out.println(set.findSet(0));
-        System.out.println(set.findSet(1));
-        System.out.println(set.findSet(2));
-        System.out.println(set.findSet(3));
-        System.out.println(set.findSet(4));
-        System.out.println(set.findSet(5));
-        System.out.println(set.findSet(6));
-
-
-
-
-
-
-
-
-
-    }
 
 }

@@ -11,6 +11,11 @@ public class Graph {
     private ArrayList<Node> index_nodes_transpose;//these are key objects of hashmap we stored refrence of them here to use
     private boolean cycle;
     private LinkedList<Node> transpose_stack=new LinkedList<>();
+    private ArrayList<Edge> edges;
+
+    public ArrayList<Edge> edgeList(){
+        return  edges;
+    }
 
     public enum TYPE{
         DIRECTED,UNDIRECTED
@@ -63,7 +68,7 @@ public class Graph {
             return finishTime;
         }
 
-        public int node_no;
+        private int node_no;
     private boolean visited;
     private int distance;
     private Node predecessor;
@@ -102,8 +107,32 @@ public class Graph {
         }
     }
 
+    public static class Edge implements Comparable{
+        public int source;
+        public int destination;
+        public int weight;
+
+         Edge(int s,int d ,int w){
+            source=s;
+            destination=d;
+            weight=w;
+        }
+
+
+        @Override
+        public int compareTo(Object o) {
+            return -((Edge)o).weight+this.weight;
+        }
+
+        @Override
+        public String toString() {
+            return (source+"---"+weight+"--->"+destination);
+        }
+    }
+
     public Graph(int vertices,int edges,TYPE t ,WEIGHT w){
         adj=new HashMap<>();
+        this.edges=new ArrayList<>();
         for(int i=0;i<vertices;i++){
             Node created_node=new Node(i);
             if(WEIGHT.WEIGHTED==w) {
@@ -117,11 +146,17 @@ public class Graph {
 //            System.out.println("Enter Source and destination to add an edge :");
             int source=sc.nextInt();
             int destination= sc.nextInt();
-            int weight = sc.nextInt();
+            int weight=1;
+            if(WEIGHT.WEIGHTED==w){
+            weight = sc.nextInt();
+            }
+            Edge e=new Edge(source,destination,weight);
+            this.edges.add(e);
+
             try {
                 addEdge(source,destination,t,w,weight,vertices);
 
-            }catch (NullPointerException|IndexOutOfBoundsException e){
+            }catch (NullPointerException|IndexOutOfBoundsException ex){
                 System.err.println("enter correct number of nodes between 0 to "+(vertices-1));
                 System.exit(-1);
             }
