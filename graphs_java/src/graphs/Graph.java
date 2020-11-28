@@ -21,6 +21,11 @@ public class Graph {
         TRANSPOSE
     }
 
+    public enum WEIGHT{
+        WEIGHTED,
+        UNWEIGHTED;
+    }
+
     public ArrayList<Node> vertices(){
         return index_nodes;
     }
@@ -30,14 +35,40 @@ public class Graph {
         return g.index_nodes.get(destination).distance;
     }
 
-    private static class Node{
+    public static class Node{
+        int[] weight;
 
-    private int node_no;
+        public int getNode_no() {
+            return node_no;
+        }
+
+        public boolean isVisited() {
+            return visited;
+        }
+
+        public int getDistance() {
+            return distance;
+        }
+
+        public Node getPredecessor() {
+            return predecessor;
+        }
+
+        public int getStartTime() {
+            return startTime;
+        }
+
+        public int getFinishTime() {
+            return finishTime;
+        }
+
+        private int node_no;
     private boolean visited;
     private int distance;
     private Node predecessor;
     private int startTime;
     private int finishTime;
+
 
 
     Node(int node_no){
@@ -70,10 +101,14 @@ public class Graph {
         }
     }
 
-    public Graph(int vertices,int edges,TYPE t){
+    public Graph(int vertices,int edges,TYPE t ,WEIGHT w){
         adj=new HashMap<>();
         for(int i=0;i<vertices;i++){
-            adj.put(new Node(i),new LinkedList<>());
+            Node created_node=new Node(i);
+            if(WEIGHT.WEIGHTED==w) {
+                created_node.weight = new int[vertices];            //one node can be connected to that many no ,of vertices
+            }
+                adj.put((created_node),new LinkedList<>());
         }
         index_nodes=new ArrayList<>(adj.keySet());
         Scanner sc=new Scanner(System.in);
@@ -81,8 +116,9 @@ public class Graph {
 //            System.out.println("Enter Source and destination to add an edge :");
             int source=sc.nextInt();
             int destination= sc.nextInt();
+            int weight = sc.nextInt();
             try {
-                addEdge(source,destination,t);
+                addEdge(source,destination,t,w,weight,vertices);
 
             }catch (NullPointerException|IndexOutOfBoundsException e){
                 System.err.println("enter correct number of nodes between 0 to "+(vertices-1));
@@ -104,13 +140,17 @@ public class Graph {
         }
     }
 
-    private void addEdge(int source,int destination,TYPE t) throws NullPointerException,IndexOutOfBoundsException{
+    private void addEdge(int source,int destination,TYPE t,WEIGHT w,int weight,int vertices) throws NullPointerException,IndexOutOfBoundsException{
 
         Node s;
         Node d;
 
         d=index_nodes.get(destination);
         s=index_nodes.get(source);
+
+        if(w==WEIGHT.WEIGHTED){
+            d.weight[source]=weight;
+        }
 if(t==TYPE.DIRECTED){
 
     adj.get(s).add(d);   //directed graph

@@ -4,12 +4,17 @@ public class DisjointSet {
 
     ArrayList<Node> nodeList =new ArrayList<>();
 
+
     static class Node{
         long data;
         Node parent;
         long rank;
     }
 
+
+    public DisjointSet(){
+
+    }
     public void makeSet(int value){
         Node n=new Node();
         n.data=value;
