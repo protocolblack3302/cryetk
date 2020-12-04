@@ -23,20 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a9ec728-2a0a-4025-a16d-d965c4374548" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph$ON.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph$TYPE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tester/src/DEER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DisjointSets/src/main/java/DisjointSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DisjointSets/src/main/java/DisjointSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Heaps/src/main/java/MinHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tester/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tester/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tester/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/build/classes/java/main/MaxHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/build/classes/java/main/MaxHeap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heaps/src/main/java/MaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Heaps/src/main/java/MaxHeap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../graphs_java/src/graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph$Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph$Edge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/out/production/graphs_java/graphs/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/out/production/tester/DEER.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/out/production/tester/DEER.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/src/DEER.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/src/DEER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tester/tester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../tester/tester.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +106,6 @@
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -162,17 +164,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests in 'demo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -189,7 +180,9 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.381" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.381" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -355,6 +348,8 @@
       <workItem from="1606039358432" duration="1874000" />
       <workItem from="1606078337229" duration="205000" />
       <workItem from="1606595656770" duration="1111000" />
+      <workItem from="1607064511281" duration="507000" />
+      <workItem from="1607105163645" duration="60000" />
     </task>
     <servers />
   </component>

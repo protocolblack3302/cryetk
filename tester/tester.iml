@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="graphs_java" />
     <orderEntry type="module" module-name="DisjointSets" />
+    <orderEntry type="module" module-name="Heaps.main" />
   </component>
 </module>

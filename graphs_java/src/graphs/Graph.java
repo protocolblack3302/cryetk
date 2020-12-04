@@ -5,7 +5,12 @@ import java.util.*;
 public class Graph {
 
     private int time;
-    private  HashMap<Node,LinkedList<Node>> adj;
+
+    public HashMap<Node, LinkedList<Node>> getAdjacencyList() {
+        return adjacencyList;
+    }
+
+    private   HashMap<Node,LinkedList<Node>> adjacencyList;
     private  HashMap<Node,LinkedList<Node>> transpose;
     private ArrayList<Node> index_nodes;
     private ArrayList<Node> index_nodes_transpose;//these are key objects of hashmap we stored refrence of them here to use
@@ -77,9 +82,10 @@ public class Graph {
 
 
 
-    Node(int node_no){
+    public Node(int node_no){
         this.node_no=node_no;
         visited=false;
+
 
     }
 
@@ -95,6 +101,16 @@ public class Graph {
 
 
     }
+
+        public int minEdgeConnected(){
+            int min=Integer.MAX_VALUE;
+           for(int i:weight){
+               if(i<min && i>=0){
+                   min=i;
+               }
+           }
+            return  min;
+        }
 
     @Override
     public int hashCode() {
@@ -131,16 +147,21 @@ public class Graph {
     }
 
     public Graph(int vertices,int edges,TYPE t ,WEIGHT w){
-        adj=new HashMap<>();
+        adjacencyList =new HashMap<>();
         this.edges=new ArrayList<>();
         for(int i=0;i<vertices;i++){
             Node created_node=new Node(i);
             if(WEIGHT.WEIGHTED==w) {
-                created_node.weight = new int[vertices];            //one node can be connected to that many no ,of vertices
+                created_node.weight = new int[vertices];
+                for(int index_var=0;index_var<created_node.weight.length;index_var++){
+                    created_node.weight[index_var]=-1;
+                }
+
+                //one node can be connected to that many no ,of vertices
             }
-                adj.put((created_node),new LinkedList<>());
+                adjacencyList.put((created_node),new LinkedList<>());
         }
-        index_nodes=new ArrayList<>(adj.keySet());
+        index_nodes=new ArrayList<>(adjacencyList.keySet());
         Scanner sc=new Scanner(System.in);
         for(int i=0;i<edges;++i){
 //            System.out.println("Enter Source and destination to add an edge :");
@@ -163,12 +184,14 @@ public class Graph {
         }
     }
 
+
+
     private void transposeUtil(ON type){
         if(type==ON.TRANSPOSE) {
 
             for (int i = 0; i < index_nodes_transpose.size(); i++) {
-                for (int j = 0; j < adj.get(new Node(i)).size(); j++) {
-                    transpose.get(adj.get(index_nodes.get(i)).get(j)).add(index_nodes_transpose.get(i));  //copying values from adjacecny
+                for (int j = 0; j < adjacencyList.get(new Node(i)).size(); j++) {
+                    transpose.get(adjacencyList.get(index_nodes.get(i)).get(j)).add(index_nodes_transpose.get(i));  //copying values from adjacecny
                     // list to tranpose adjaceny list ,,,we do this by forming opposite links
                     //making sure nodes in linked list of transposed adj list as those same objects from key set of hasmap
                 }
@@ -189,12 +212,12 @@ public class Graph {
         }
 if(t==TYPE.DIRECTED){
 
-    adj.get(s).add(d);   //directed graph
+    adjacencyList.get(s).add(d);   //directed graph
 }
 else {
 
-        adj.get(s).add(d);
-        adj.get(d).add(s); //else undirected
+        adjacencyList.get(s).add(d);
+        adjacencyList.get(d).add(s); //else undirected
 
 
 }
@@ -212,7 +235,7 @@ else {
 
         while (!(q.isEmpty())){
             current=q.poll();
-            for(Node vertex:adj.get(current)){
+            for(Node vertex: adjacencyList.get(current)){
                 if(!vertex.visited){
                     vertex.visited=true;
                     vertex.distance=current.distance+1;
@@ -268,7 +291,7 @@ else {
                 if (!n.visited) {
                      //making sure by pushing index_nodes_transpose nodes that
                     //that old visited node of old adj list should not cause problem as its a new node
-                    dfsUtil(n, this.adj,ON.SIMPLE);
+                    dfsUtil(n, this.adjacencyList,ON.SIMPLE);
 
                 }
             }
@@ -326,7 +349,7 @@ System.out.println();
             if(current.node_no==destination){
                 return true;
             }
-            for(Node n:adj.get(current)){
+            for(Node n: adjacencyList.get(current)){
                 if(!n.visited){
                     n.visited=true;
                     stk.push(n);

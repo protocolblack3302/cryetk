@@ -8,7 +8,7 @@ public class MaxHeap implements Heap {
 private ArrayList<Integer> heap;
 int size; //size of actual heap
 
-MaxHeap(int[] arr){
+public MaxHeap(int[] arr){
     heap=new ArrayList<>();
     heap.add(0,-1); //we will start it from index 1 for simplicity
     size=0;
