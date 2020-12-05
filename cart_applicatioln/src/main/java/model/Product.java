@@ -1,27 +1,49 @@
 package model;
 
 
-class Product implements Serializable{
+import java.io.Serializable;
+import java.text.NumberFormat;
 
-private int name;
-	/**
-	* Returns value of name
-	* @return
-	*/
-	public int getName() {
-		return name;
-	}
+class Product implements Serializable {
+private String code;
+private String description;
+private double price;
 
-	/**
-	* Sets new value of name
-	* @param
-	*/
-	public void setName(int name) {
-		this.name = name;
-	}
-
-
-	public static void main(String[] args){
-		
-	}
+public Product(){
+	code="";
+	description="";
+	price=0;
 }
+
+public void setCode(String code){
+	this.code=code;
+
+}
+
+public String getCode() {return code;}
+public String getDescription() {return description;}
+
+public void setDescription(String description){
+	this.description=description;
+
+
+}
+public void setPrice(double price){
+	this.price=price;
+}
+
+public double getPrice(){
+	return price;
+}
+
+
+public String getPriceCurrencyFormat(){
+	NumberFormat currency= NumberFormat.getCurrencyInstance();
+	return currency.format(price);
+}
+
+}
+
+
+	
+
