@@ -10,13 +10,13 @@ public class Graph {
         return adjacencyList;
     }
 
-    private   HashMap<Node,LinkedList<Node>> adjacencyList;
+    private final HashMap<Node,LinkedList<Node>> adjacencyList;
     private  HashMap<Node,LinkedList<Node>> transpose;
-    private ArrayList<Node> index_nodes;
-    private ArrayList<Node> index_nodes_transpose;//these are key objects of hashmap we stored refrence of them here to use
+    private final ArrayList<Node> index_nodes;
+    private ArrayList<Node> index_nodes_transpose;//these are key objects of hashmap we stored reference of them here to use
     private boolean cycle;
-    private LinkedList<Node> transpose_stack=new LinkedList<>();
-    private ArrayList<Edge> edges;
+    private final LinkedList<Node> transpose_stack=new LinkedList<>();
+    final private ArrayList<Edge> edges;
 
     public ArrayList<Edge> edgeList(){
         return  edges;
@@ -26,14 +26,14 @@ public class Graph {
         DIRECTED,UNDIRECTED
     }
 
-    private enum ON{
+    public enum ON{
         SIMPLE,
         TRANSPOSE
     }
 
     public enum WEIGHT{
         WEIGHTED,
-        UNWEIGHTED;
+        UNWEIGHTED
     }
 
     public ArrayList<Node> vertices(){
@@ -73,7 +73,7 @@ public class Graph {
             return finishTime;
         }
 
-        private int node_no;
+    private final int node_no;
     private boolean visited;
     private int distance;
     private Node predecessor;
@@ -104,8 +104,8 @@ public class Graph {
 
         public int minEdgeConnected(){
             int min=Integer.MAX_VALUE;
-           for(int i:weight){
-               if(i<min && i>=0){
+           for(int i:this.weight){
+               if(i<min && i>0){
                    min=i;
                }
            }
@@ -137,7 +137,7 @@ public class Graph {
 
         @Override
         public int compareTo(Object o) {
-            return -((Edge)o).weight+this.weight;
+            return -((Edge)o).weight-this.weight;
         }
 
         @Override
@@ -153,9 +153,7 @@ public class Graph {
             Node created_node=new Node(i);
             if(WEIGHT.WEIGHTED==w) {
                 created_node.weight = new int[vertices];
-                for(int index_var=0;index_var<created_node.weight.length;index_var++){
-                    created_node.weight[index_var]=-1;
-                }
+                Arrays.fill(created_node.weight, -1);
 
                 //one node can be connected to that many no ,of vertices
             }
@@ -175,7 +173,7 @@ public class Graph {
             this.edges.add(e);
 
             try {
-                addEdge(source,destination,t,w,weight,vertices);
+                addEdge(source,destination,t,w,weight);
 
             }catch (NullPointerException|IndexOutOfBoundsException ex){
                 System.err.println("enter correct number of nodes between 0 to "+(vertices-1));
@@ -186,20 +184,20 @@ public class Graph {
 
 
 
-    private void transposeUtil(ON type){
-        if(type==ON.TRANSPOSE) {
+    private void transposeUtil(){
+
 
             for (int i = 0; i < index_nodes_transpose.size(); i++) {
                 for (int j = 0; j < adjacencyList.get(new Node(i)).size(); j++) {
-                    transpose.get(adjacencyList.get(index_nodes.get(i)).get(j)).add(index_nodes_transpose.get(i));  //copying values from adjacecny
-                    // list to tranpose adjaceny list ,,,we do this by forming opposite links
-                    //making sure nodes in linked list of transposed adj list as those same objects from key set of hasmap
-                }
+                    transpose.get(adjacencyList.get(index_nodes.get(i)).get(j)).add(index_nodes_transpose.get(i));  //copying values from adjacency
+                    // list to transpose adjacent list ,,,we do this by forming opposite links
+                    //making sure nodes in linked list of transposed adj list as those same objects from key set of hashmap
+
             }
         }
     }
 
-    private void addEdge(int source,int destination,TYPE t,WEIGHT w,int weight,int vertices) throws NullPointerException,IndexOutOfBoundsException{
+    private void addEdge(int source,int destination,TYPE t,WEIGHT w,int weight) throws NullPointerException,IndexOutOfBoundsException{
 
         Node s;
         Node d;
@@ -266,12 +264,12 @@ else {
 
                 dfsUtil(v, adj, type);
             }
-            else if(v.visited && source.predecessor!=v && type==ON.SIMPLE){  //checking if graph has cycle and setting cycle variable of graph to true or false
+            else if( source.predecessor!=v && type==ON.SIMPLE){  //checking if graph has cycle and setting cycle variable of graph to true or false
                 cycle=true;   //if the current source node has v in adjacency list and it is already visited and it is not parent of source node
-                //then it is a backedge which meaans graph has a cycle
+                //then it is a backed which means graph has a cycle
             }
         }
-            if(type==ON.SIMPLE) {
+            if(type == ON.SIMPLE && index_nodes_transpose!=null) {
                 transpose_stack.push(index_nodes_transpose.get(source.node_no));
             //after a node finishes recursion push it onto the stack for tracking which has least or most time
                 //and then we will perform dfs on transpose of graph for decreasing finishing time
@@ -304,7 +302,7 @@ System.out.println();
                 Node n=transpose_stack.poll();
                 if (!n.visited) {
 
-                    System.out.println("COMPONENT TREE: "); //it will print the forest formed by kosarajus algorithm
+                    System.out.println("COMPONENT TREE: "); //it will print the forest formed by korasaju's algorithm
                     System.out.print("->"+n.node_no);
 
                     dfsUtil(n,transpose,ON.TRANSPOSE);
@@ -317,10 +315,10 @@ System.out.println();
     }
 
     public void transpose(){
-     transposeUtil(ON.TRANSPOSE);
+     transposeUtil();
     }
 
-    private void create_transpore_adj(){
+    private void create_transpose_adj(){
         transpose = new HashMap<>();
         for (int i = 0; i < index_nodes.size(); i++) {
             transpose.put(new Node(i), new LinkedList<>());
@@ -328,7 +326,7 @@ System.out.println();
         index_nodes_transpose = new ArrayList<>(transpose.keySet());
     }
     public void stronglyConnected(){
-        create_transpore_adj();
+        create_transpose_adj();
         dfs(ON.SIMPLE);
         transpose();
         dfs(ON.TRANSPOSE);
@@ -359,14 +357,14 @@ System.out.println();
         return false;
     }
 
-    public void printGraph(int source,int destination){
+    public void printGraph(int destination){
         //run dfs before printing this
         Node d=index_nodes.get(destination);
-        if(d.predecessor==null){
+        if(d.predecessor!=null) {
 
-        }else{
-            printGraph(source,d.predecessor.node_no);
-            System.out.print("->"+d.node_no);
+
+            printGraph( d.predecessor.node_no);
+            System.out.print("->" + d.node_no);
         }
         System.out.println();
     }
