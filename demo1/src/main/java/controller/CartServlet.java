@@ -1,8 +1,10 @@
 package controller;
 import java.io.*;
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import model.*;
+@WebServlet(name = "servlet",urlPatterns = {"/cart"})
 
 public class CartServlet extends HttpServlet {
 
@@ -21,48 +23,51 @@ public class CartServlet extends HttpServlet {
 
         // perform action and set URL to appropriate page
         String url = "/index.jsp";
-        if (action.equals("shop")) {
-            url = "/index.jsp";    // the "index" page
-        }
-        else if (action.equals("cart")) {
-            String productCode = request.getParameter("productCode");
-            String quantityString = request.getParameter("quantity");
+        switch (action) {
+            case "shop":
+                url = "/index.jsp";    // the "index" page
+                break;
+            case "cart":
+                String productCode = request.getParameter("productCode");
+                String quantityString = request.getParameter("quantity");
+                HttpSession session = request.getSession();
 
-            HttpSession session = request.getSession();
-            model.Cart cart = (Cart) session.getAttribute("cart");
-            if (cart == null) {
-                cart = new Cart();
-            }
+                Cart cart = (Cart) session.getAttribute("cart");
+                if (cart == null) {
+                    cart = new Cart();
+                }
 
-            //if the user enters a negative or invalid quantity,
-            //the quantity is automatically reset to 1.
-            int quantity;
-            try {
-                quantity = Integer.parseInt(quantityString);
-                if (quantity < 0) {
+                //if the user enters a negative or invalid quantity,
+                //the quantity is automatically reset to 1.
+                int quantity;
+                try {
+                    quantity = Integer.parseInt(quantityString);
+                    if (quantity < 0) {
+                        quantity = 1;
+                    }
+                } catch (NumberFormatException nfe) {
                     quantity = 1;
                 }
-            } catch (NumberFormatException nfe) {
-                quantity = 1;
-            }
 
-            String path = sc.getRealPath("/WEB-INF/products.txt");
-            Product product = ProductIO.getProduct(productCode, path);
+                String path = sc.getRealPath("/WEB-INF/Products/");
+                ProductIO.addProduct(path,"8601");
+                Product product = ProductIO.getProduct(productCode, path);
 
-            LineItem lineItem = new LineItem();
-            lineItem.setProduct(product);
-            lineItem.setQuantity(quantity);
-            if (quantity > 0) {
-                cart.addItem(lineItem);
-            } else if (quantity == 0) {
-                cart.removeItem(lineItem);
-            }
+                LineItem lineItem = new LineItem();
+                lineItem.setProduct(product);
+                lineItem.setQuantity(quantity);
+                if (quantity > 0) {
+                    cart.addItem(lineItem);
+                } else {
+                    cart.removeItem(lineItem);
+                }
 
-            session.setAttribute("cart", cart);
-            url = "/cart.jsp";
-        }
-        else if (action.equals("checkout")) {
-            url = "/checkout.jsp";
+                session.setAttribute("cart", cart);
+                url = "/cart.jsp";
+                break;
+            case "checkout":
+                url = "/checkout.jsp";
+                break;
         }
 
         sc.getRequestDispatcher(url)

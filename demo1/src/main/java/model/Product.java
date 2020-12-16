@@ -1,7 +1,8 @@
 package model;
 
 import java.io.Serializable;
-import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
 
 public class Product implements Serializable {
 private String code;
@@ -37,8 +38,8 @@ public double getPrice(){
 
 
 public String getPriceCurrencyFormat(){
-	NumberFormat currency= NumberFormat.getCurrencyInstance();
-	return currency.format(price);
+Currency c=Currency.getInstance(Locale.getDefault());
+return c.getSymbol()+getPrice();
 }
 
 }

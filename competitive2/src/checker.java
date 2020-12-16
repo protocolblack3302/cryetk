@@ -1,5 +1,5 @@
 
- public class checker {
+ public class   checker {
     //RECURSIVE LCS
     // static int m, n;
     //  static int[][] result=new int[6][6];

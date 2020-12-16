@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>welcome</title>
-    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
 </head>
 <body>
 
@@ -13,13 +12,14 @@
     <tr>
         <th>Description</th>
         <th class="text-center">Price</th>
-        <th>&nbsp</th>
+        <th>&nbsp;</th>
     </tr>
     <tr>
         <td>(Bohemia)Rooh</td>
         <td class="text-center">$14</td>
         <td><form action="cart" method="post">
             <input type="hidden" name="productCode" value="8601">
+            <input type="submit" value="submit">
         </form>
         </td>
     </tr>
