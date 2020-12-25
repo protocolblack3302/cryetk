@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.7.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+
+    compileOnly('javax.ejb:javax.ejb-api:3.2.2')
+    compileOnly('javax.persistence:javax.persistence-api:2.2')
+    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    implementation('org.hibernate:hibernate-entitymanager:5.4.18.Final')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
