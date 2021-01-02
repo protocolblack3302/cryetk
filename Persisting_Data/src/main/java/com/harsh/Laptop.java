@@ -11,10 +11,9 @@ import javax.persistence.*;
 @org.hibernate.annotations.Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class Laptop {
     @Id
-
     private Long id;
     private String company;
-    @JoinColumn(name="user_id")
+    @JoinColumn
     @ManyToOne
     User user;
     public User getUser() {

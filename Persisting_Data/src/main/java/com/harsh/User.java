@@ -9,7 +9,6 @@ import java.util.List;
 
 public class User {
     @Id
-    @Column(name="user_id")
     private Long id;
     private String name;
     private String email;

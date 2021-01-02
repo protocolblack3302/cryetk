@@ -43,10 +43,11 @@ public class Tester {
         Session session3=sessionFactory.openSession();
         Transaction trx3=session3.beginTransaction();
         Query query=session3.createSQLQuery("select * from " +
-                "laptop natural join people" );
+                "laptop join people on " +
+                "laptop.user_id=people.id");
         List<Object[]> list=query.getResultList();
         for(Object[] o:list){
-            System.out.println(o[0]+" : "+o[1]+" : "+o[2]+" : "+o[3]+" : "+o[4]);
+            System.out.println(o[0]+" : "+o[1]+" : "+o[2]+" : "+o[3]+" : "+o[4]+" : "+o[5]);
         }
         trx3.commit();
         session3.close();
