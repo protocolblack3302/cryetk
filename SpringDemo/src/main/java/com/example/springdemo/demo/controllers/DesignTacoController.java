@@ -1,12 +1,12 @@
 package com.example.springdemo.demo.controllers;
 import java.util.Arrays;
 import java.util.List;
-
 import com.example.springdemo.demo.domains.Ingredient;
 import com.example.springdemo.demo.domains.Taco;
 import com.example.springdemo.demo.utility.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -54,12 +54,11 @@ public class DesignTacoController {
             return "design";
         }
 
-
         SessionFactory sessionFactory= HibernateUtil.getSessionFactory();
         Session session1=sessionFactory.openSession();
-        session1.beginTransaction();
+        Transaction trx=session1.beginTransaction();
         session1.save(design);
-
+        trx.commit();
         session1.close();
 
         // We'll do this in chapter 3
