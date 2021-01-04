@@ -3,26 +3,28 @@ import java.util.Arrays;
 import java.util.List;
 import com.example.springdemo.demo.domains.Ingredient;
 import com.example.springdemo.demo.domains.Taco;
-import com.example.springdemo.demo.utility.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import com.example.springdemo.demo.repositories.TacoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.extern.slf4j.Slf4j;
-
 import javax.validation.Valid;
-
 import static java.util.stream.Collectors.toList;
 
 @Slf4j
 @Controller
 @RequestMapping("/design")
+
+
 public class DesignTacoController {
+    @Autowired
+    TacoRepository tacoRepository;
+
     @GetMapping
     public String showDesignForm(Model model) {
         List<Ingredient> ingredients = Arrays.asList(
@@ -48,18 +50,13 @@ public class DesignTacoController {
 
     }
     @PostMapping
-    public String processDesign(@Valid Taco design , Errors errors) {
+    public String processDesign(@Valid @ModelAttribute("design") Taco design , Errors errors) {
         // Save the taco design...
         if(errors.hasErrors()){
             return "design";
         }
 
-        SessionFactory sessionFactory= HibernateUtil.getSessionFactory();
-        Session session1=sessionFactory.openSession();
-        Transaction trx=session1.beginTransaction();
-        session1.save(design);
-        trx.commit();
-        session1.close();
+        tacoRepository.save(design);
 
         // We'll do this in chapter 3
         log.info("Processing design: " + design);

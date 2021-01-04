@@ -1,20 +1,21 @@
 package com.example.springdemo.demo.domains;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-
-
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
-@Table
-public class Order {
+@Table(name = "tacoOrder")
+public class Order implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     @NotBlank(message = "cannot be empty")
     private String name;
@@ -32,4 +33,7 @@ public class Order {
     private String ccExpiration;
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
+    @OneToMany(mappedBy = "tacoOrderId")
+    List<Taco> tacoID;
+
 }
