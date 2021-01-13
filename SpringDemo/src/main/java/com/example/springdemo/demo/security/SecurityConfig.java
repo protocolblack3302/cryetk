@@ -1,5 +1,4 @@
 package com.example.springdemo.demo.security;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,8 +7,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import com.example.springdemo.demo.service.UserRepositoryUserDetailsService;
 
 import javax.sql.DataSource;
 
@@ -19,12 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     DataSource dataSource;
+    @Autowired
+    UserRepositoryUserDetailsService userDetailsService;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-auth.jdbcAuthentication().dataSource(dataSource);
+auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
     }
-
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -33,11 +33,19 @@ auth.jdbcAuthentication().dataSource(dataSource);
                 .antMatchers("/design").hasRole("USER")
                 .antMatchers("/").permitAll()
                 .and()
-                .formLogin();
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/design")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/");
     }
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
+
+
+
 }

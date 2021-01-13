@@ -35,5 +35,7 @@ public class Order implements Serializable {
     private String ccCVV;
     @OneToMany(mappedBy = "tacoOrderId")
     List<Taco> tacoID;
+    @ManyToOne
+    private Users user;
 
 }
