@@ -1,7 +1,6 @@
 package com.example.springdemo.demo.domains;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
-
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -33,8 +32,8 @@ public class Order implements Serializable {
     private String ccExpiration;
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
-    @OneToMany(mappedBy = "tacoOrderId")
-    List<Taco> tacoID;
+    @OneToMany
+    private List<Taco> order_taco;
     @ManyToOne
     private Users user;
 

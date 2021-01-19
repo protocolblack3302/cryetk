@@ -3,8 +3,12 @@ import java.util.Arrays;
 import java.util.List;
 import com.example.springdemo.demo.domains.Ingredient;
 import com.example.springdemo.demo.domains.Taco;
+import com.example.springdemo.demo.domains.Users;
+import com.example.springdemo.demo.repositories.IngredientRepository;
 import com.example.springdemo.demo.repositories.TacoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -13,17 +17,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import javax.validation.Valid;
 import static java.util.stream.Collectors.toList;
 
 @Slf4j
 @Controller
 @RequestMapping("/design")
-
-
+@RequiredArgsConstructor
 public class DesignTacoController {
-    @Autowired
-    TacoRepository tacoRepository;
+
+    private final IngredientRepository ingredientRepository;
+    private final TacoRepository tacoRepository;
 
     @GetMapping
     public String showDesignForm(Model model) {
@@ -39,6 +45,8 @@ public class DesignTacoController {
                 new Ingredient("SLSA", "Salsa", Ingredient.Type.SAUCE),
                 new Ingredient("SRCR", "Sour Cream", Ingredient.Type.SAUCE)
         );
+        ingredients.forEach(ingredientRepository::save);
+
         Ingredient.Type[] types = Ingredient.Type.values();
         for (Ingredient.Type type : types) {
             model.addAttribute(type.toString().toLowerCase(),
@@ -49,15 +57,15 @@ public class DesignTacoController {
 
 
     }
+
     @PostMapping
-    public String processDesign(@Valid @ModelAttribute("design") Taco design , Errors errors) {
+    public String processDesign(@AuthenticationPrincipal Users user, @Valid @ModelAttribute("design") Taco design , Errors errors) {
         // Save the taco design...
         if(errors.hasErrors()){
             return "design";
         }
-
-        tacoRepository.save(design);
-
+            design.setUser(user);
+            tacoRepository.save(design);
         // We'll do this in chapter 3
         log.info("Processing design: " + design);
         return "redirect:/orders/current";

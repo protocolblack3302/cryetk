@@ -29,8 +29,8 @@ auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder()
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/design/**").hasRole("USER")
                 .antMatchers("/orders/current").hasRole("USER")
-                .antMatchers("/design").hasRole("USER")
                 .antMatchers("/").permitAll()
                 .and()
                 .formLogin()

@@ -1,4 +1,4 @@
-package com.example.springdemo.demo.controllers;
+package com.example.springdemo.demo.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

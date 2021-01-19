@@ -4,6 +4,7 @@ import com.example.springdemo.demo.domains.Authorities;
 import com.example.springdemo.demo.domains.Users;
 import com.example.springdemo.demo.repositories.AuthorityRepository;
 import com.example.springdemo.demo.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -13,20 +14,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/")
 public class HomeController {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final AuthorityRepository authorityRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    private AuthorityRepository authorityRepository;
-
-    private PasswordEncoder passwordEncoder;
-
-@Autowired
-   public HomeController(UserRepository userRepository,AuthorityRepository authorityRepository,PasswordEncoder passwordEncoder){
-        this.userRepository=userRepository;
-        this.passwordEncoder=passwordEncoder;
-        this.authorityRepository=authorityRepository;
-    }
 
 @GetMapping
 public String home(Model model){
