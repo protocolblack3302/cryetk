@@ -46,6 +46,4 @@ auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder()
         return new BCryptPasswordEncoder();
     }
 
-
-
 }
