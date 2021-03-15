@@ -1,5 +1,5 @@
 package com.example.springdemo.demo.security;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -10,20 +10,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import com.example.springdemo.demo.service.UserRepositoryUserDetailsService;
 
-import javax.sql.DataSource;
-
+@RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    DataSource dataSource;
-    @Autowired
-    UserRepositoryUserDetailsService userDetailsService;
+   private final UserRepositoryUserDetailsService userDetailsService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
+     auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
     }
 
     @Override
@@ -32,6 +28,8 @@ auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder()
                 .antMatchers("/design/**").hasRole("USER")
                 .antMatchers("/orders/current").hasRole("USER")
                 .antMatchers("/").permitAll()
+                .antMatchers("/send").permitAll()
+                .antMatchers("/allOrders").permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/login")

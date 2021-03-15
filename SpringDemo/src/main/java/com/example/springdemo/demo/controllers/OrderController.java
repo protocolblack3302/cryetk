@@ -1,4 +1,5 @@
 package com.example.springdemo.demo.controllers;
+import com.example.springdemo.demo.configurations.OrderProps;
 import com.example.springdemo.demo.domains.Order;
 import com.example.springdemo.demo.domains.Taco;
 import com.example.springdemo.demo.domains.Users;
@@ -6,6 +7,9 @@ import com.example.springdemo.demo.repositories.OrderRepository;
 import com.example.springdemo.demo.repositories.TacoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,8 +26,17 @@ import java.util.List;
 @RequestMapping("/orders")
 @RequiredArgsConstructor  //to initialize the final fields of the class
 public class OrderController {
+
     private final TacoRepository tacoRepository;
     private final OrderRepository orderRepository;
+    private final OrderProps orderProperties;
+
+    @GetMapping("/allOrders")
+    public String getAllOrders(Model model, @AuthenticationPrincipal Users user){
+        Pageable pageable = PageRequest.of(0,orderProperties.getPageSize());
+        model.addAttribute("allOrders",orderRepository.findAllByUser(pageable,user));
+        return "allOrders";
+    }
 
     @GetMapping("/current")
     public String orderForm(Model model) {

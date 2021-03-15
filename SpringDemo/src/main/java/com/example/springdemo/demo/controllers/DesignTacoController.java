@@ -41,7 +41,7 @@ public class DesignTacoController {
                 new Ingredient("CHED", "Cheddar", Ingredient.Type.CHEESE),
                 new Ingredient("JACK", "Monterrey Jack", Ingredient.Type.CHEESE),
                 new Ingredient("SLSA", "Salsa", Ingredient.Type.SAUCE),
-                new Ingredient("SRCR", "Sour Cream", Ingredient.Type.SAUCE)
+                new Ingredient("SRCR", "Sour dream", Ingredient.Type.SAUCE)
         );
 
         ingredients.forEach(ingredientRepository::save);

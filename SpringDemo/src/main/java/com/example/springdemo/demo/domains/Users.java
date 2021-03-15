@@ -1,8 +1,6 @@
 package com.example.springdemo.demo.domains;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +11,6 @@ import java.util.Collections;
 
 @Data
 @Entity
-@OnDelete(action = OnDeleteAction.CASCADE)
 @RequiredArgsConstructor
 public class Users implements UserDetails {
   @Id
@@ -24,7 +21,7 @@ public class Users implements UserDetails {
     private String username;
   @Column(name="password",nullable = false)
   private String password;
-  @Column(name="enabled",nullable = false,columnDefinition = "boolean default true")
+  @Column(name="enabled",nullable = false , columnDefinition = "boolean default true")
   private Boolean enabled=true;
 
   @Override
