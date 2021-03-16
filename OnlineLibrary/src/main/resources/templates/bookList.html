@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li th:each="book : ${books}">
+        <h4 th:text="${book.bookTitle}">placeholder</h4>
+    </li>
+</ul>
+
+</body>
+</html>

@@ -2,13 +2,12 @@ package com.coderme.Library.Domains;
 
 import lombok.Data;
 
-import java.awt.image.BufferedImage;
+import java.io.Serializable;
 
 @Data
-public class Book {
-
+public class Book implements Serializable
+{
     private String bookTitle;
-    private BufferedImage thumbnail;
     private float version;
     private String author;
     private int pages;

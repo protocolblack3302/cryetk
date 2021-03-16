@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 @Data
 public class DirectoryProp {
 
-    public static String directory="/Users/protocolblack/Downloads/books";
+    public static String directory="/Users/protocolblack/Downloads/book2";
 
 }

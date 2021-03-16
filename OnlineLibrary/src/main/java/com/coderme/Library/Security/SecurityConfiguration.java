@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .and()
                     .formLogin()
                     .loginPage("/login")
-                    .defaultSuccessUrl("/homePage")
+                    .defaultSuccessUrl("/search")
                     .and()
                     .logout()
                     .logoutSuccessUrl("/login");

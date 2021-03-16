@@ -3,6 +3,6 @@
     {
       "name": "filescanner.directory",
       "type": "java.lang.String",
-      "description": "scans file in the the defined directory ."
+      "description": "scans pdfs in the the defined directory ."
     }
   ] }

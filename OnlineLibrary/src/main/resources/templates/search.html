@@ -6,8 +6,14 @@
     <title>Title</title>
 </head>
 <body>
-<form class="form-wrapper" th:action="@{/search}" th:method="post" >
-    <input type="text" name="searchString" placeholder="Search for..." required>
+
+<form class="form-wrapper" th:action="@{/search}" th:method="post" th:object="${searchObject}" >
+    <input type="text" th:field="*{searchString}" required>
     <input type="submit" value="go" id="submit">
-</form></body>
+    <br>
+    <span class="validationError" th:if="${#fields.hasErrors('searchString')}"
+          th:errors="${searchString}">ccNumberError</span>
+</form>
+
+</body>
 </html>

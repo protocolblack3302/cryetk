@@ -1,31 +1,33 @@
 package com.coderme.Library.Converters;
 import com.coderme.Library.Domains.Book;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.integration.transformer.GenericTransformer;
-import org.springframework.stereotype.Component;
+import java.io.File;
+import java.io.IOException;
 
-@Component
+
 @Slf4j
-@Data
-public class UrlToBookConverter implements GenericTransformer<String,Book> {
 
-public Book urlToBook (String sourceFile){
+public class UrlToBookConverter{
 
-    PdfToImageConverter pdfToImageConverter = new PdfToImageConverter();
-    pdfToImageConverter.OpenDocument(sourceFile);
-    Book book = new Book();
-    book.setBookTitle(pdfToImageConverter.getTitle());
-    book.setAuthor(pdfToImageConverter.getAuthor());
-    book.setThumbnail(pdfToImageConverter.convertToThumbnail());
-    book.setVersion(pdfToImageConverter.getVersion());
-    log.info(book.toString());
-    log.info("Book is closed :  " + String.valueOf(pdfToImageConverter.closeDocument()));
+    public Book transformToBook (String sourceFile){
+        File file = new File(sourceFile);
+        PdfUtilities pdfUtilities = null;
+        Book book = new Book();
+        try {
+            pdfUtilities = new PdfUtilities(file);
+            book.setBookTitle(pdfUtilities.getTitle());
+            book.setAuthor(pdfUtilities.getAuthor());
+            book.setVersion(pdfUtilities.getVersion());
+            log.info(book.toString());
 
-    return book;
-}
-    @Override
-    public Book transform(String s) {
-        return urlToBook(s);
-    }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }finally {
+            if(pdfUtilities!=null){
+                pdfUtilities.closeDocument();
+            }
+        }
+        return book;
+        }
+
 }

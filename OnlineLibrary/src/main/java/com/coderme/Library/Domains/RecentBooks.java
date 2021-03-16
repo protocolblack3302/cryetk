@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Queue;
 
 @Component
@@ -12,7 +13,7 @@ import java.util.Queue;
 @Slf4j
 @ConfigurationProperties("bookfetch")
 
-public class RecentBooks {
+public class RecentBooks implements Serializable {
    private int pagedBooks = 12;
    private Queue<Book> recentBooks;
 
